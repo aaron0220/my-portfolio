@@ -1,0 +1,78 @@
+$amber-500: rgb(245 158 11);
+.navbar-toggler {
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  margin: 18px 15px;
+  padding: 10px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  width: 25px;
+}
+.navbar-toggler,
+.navbar-toggler span {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.navbar-toggler span {
+  background: #3c3636;
+  border-radius: 2px;
+  height: 2px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  transition: 0.25s ease-in-out;
+  width: 100%;
+}
+.navbar-toggler span:nth-child(2) {
+  top: 14px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.primary-menu .navbar-toggler span {
+  background: #fff;
+}
+
+.navbar-toggler span:first-child {
+  top: 7px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.navbar-toggler.show span:first-child {
+  left: 3px;
+  top: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.navbar-toggler span:nth-child(2) {
+  top: 14px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.navbar-toggler.show span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.navbar-toggler span:nth-child(3) {
+  top: 21px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.navbar-toggler.show span:nth-child(3) {
+  left: 3px;
+  top: 21px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.nav-item.active a {
+  color: $amber-500;
+}
+.nav-item:hover a {
+  color: $amber-500;
+}
+@media (min-width: 1024px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
