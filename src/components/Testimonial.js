@@ -18,6 +18,20 @@ function Testimonial(props) {
         "Working with Aaron has been an absolute pleasure. His expertise in web development is evident, and he were always responsive to our needs and feedback.",
     },
     {
+      name: "Brandon Burr",
+      image: "media/testimonials/brandon.jpg",
+      title: "Founder and CEO at JetLogiq Solutions",
+      message:
+        "Aaron, the development has exceeded expectations, thanks to your skillful execution and innovative approach. You consistently delivered on time, with a strong focus on both user experience and functionality, making this collaboration a success.",
+    },
+    {
+      name: "Justin Root",
+      image: "media/testimonials/justin-root.jpg",
+      title: "Founder at TrooOrganics",
+      message:
+        "You've really nailed this WordPress project! The site looks awesome and works super smooth – your creativity and problem-solving made everything come together perfectly.",
+    },
+    {
       name: "Buddy Rigotti",
       image: "media/testimonials/buddy.jpg",
       title: "Digital Marketer at Cristersmedia",

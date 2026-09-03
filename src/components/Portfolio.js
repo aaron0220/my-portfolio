@@ -5,6 +5,33 @@ import Title from "./section/Title";
 function Portfolio({ open, portfolio }) {
   const PROJECTS = [
     {
+      id: 13,
+      name: "Lifelink-Medical",
+      company: "Intoweb",
+      image: "media/portfolio/lifelink/frontpage.jpg",
+      url: "https://www.lifelink-medical.com/",
+      slides: [
+        "media/portfolio/lifelink/1.jpg",
+        "media/portfolio/lifelink/2.jpg",
+      ],
+    },
+    {
+      id: 12,
+      name: "Inhesa",
+      company: "Intoweb",
+      image: "media/portfolio/inhesa/frontpage.jpg",
+      url: "https://www.inhesa.de/",
+      slides: ["media/portfolio/inhesa/1.jpg", "media/portfolio/inhesa/2.jpg"],
+    },
+    {
+      id: 11,
+      name: "Dont Call Me Sick",
+      company: "Intoweb",
+      image: "media/portfolio/dcms/frontpage.jpg",
+      url: "https://www.dont-call-me-sick.de/",
+      slides: ["media/portfolio/dcms/1.jpg", "media/portfolio/dcms/2.jpg"],
+    },
+    {
       id: 10,
       name: "Noobru Advantage",
       company: "Noobru",
@@ -17,19 +44,25 @@ function Portfolio({ open, portfolio }) {
     },
     {
       id: 9,
-      name: "Inhesa",
-      company: "Intoweb",
-      image: "media/portfolio/inhesa/frontpage.jpg",
-      url: "https://www.inhesa.de/",
-      slides: ["media/portfolio/inhesa/1.jpg", "media/portfolio/inhesa/2.jpg"],
+      name: "Prefense",
+      company: "JetWebinar",
+      image: "media/portfolio/prefense/frontpage.jpg",
+      url: "https://prefense.com/",
+      slides: [
+        "media/portfolio/prefense/1.jpg",
+        "media/portfolio/prefense/2.jpg",
+      ],
     },
     {
       id: 8,
-      name: "Dont Call Me Sick",
-      company: "Intoweb",
-      image: "media/portfolio/dcms/frontpage.jpg",
-      url: "https://www.dont-call-me-sick.de/",
-      slides: ["media/portfolio/dcms/1.jpg", "media/portfolio/dcms/2.jpg"],
+      name: "TrooOrganics",
+      company: "TrooOrganics",
+      image: "media/portfolio/trooorganics/frontpage.jpg",
+      url: "https://trooorganics.com/",
+      slides: [
+        "media/portfolio/trooorganics/1.jpg",
+        "media/portfolio/trooorganics/2.jpg",
+      ],
     },
     {
       id: 7,

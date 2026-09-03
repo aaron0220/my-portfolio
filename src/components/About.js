@@ -40,11 +40,8 @@ function About() {
                     aaronsmerin01@gmail.com
                   </a>
                 </li>
-                <li className="border-b border-white/50 py-3 text-white">
-                  <span className="font-semibold mr-2">Age:</span>29
-                </li>
                 <li className="border-b-0 border-white/50 py-3 text-white">
-                  <span className="font-semibold mr-2">From:</span>Bataan,
+                  <span className="font-semibold mr-2">From:</span>
                   Philippines
                 </li>
               </ul>

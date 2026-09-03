@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "./section/Title";
 import Form from "./Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faMobile } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
   const [formSent, setformSent] = useState(false);
@@ -19,9 +19,16 @@ function Contact() {
           <div className="px-3 w-full xl:w-4/12 text-center lg:text-left">
             <h3 className="font-semibold text-xl uppercase mb-4">Address</h3>
             <div className="leading-[1.8]">
-              <p className="mb-4">Bataan, Philippines</p>
+              <p className="mb-4">Philippines</p>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="mr-3" />
+
+                <a href="callto:(047) 244 8432" className="text-amber-500">
+                  (047) 244 8432
+                </a>
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faMobile} className="mr-3" />
 
                 <a href="callto:+63 930 894 3528" className="text-amber-500">
                   +63 930 894 3528

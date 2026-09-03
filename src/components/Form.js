@@ -9,7 +9,7 @@ function Form({ checkSubmit }) {
 
     emailjs
       .sendForm(
-        "service_mt6bki9",
+        "service_gkw130x",
         "template_ra1nw9f",
         form.current,
         "SF5rzjmgQit1goOnk"
