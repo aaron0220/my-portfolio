@@ -14,7 +14,7 @@ function About() {
             </h2>
             <p className="text-white mb-4 leading-7 text-justify">
               I am a passionate and dedicated web developer with a strong
-              commitment to crafting exceptional digital experiences. With my 7+
+              commitment to crafting exceptional digital experiences. With my 8+
               years of experience in the ever-evolving world of web development,
               I have had the privilege of working on a diverse range of
               projects, from creating stunning websites for businesses to
@@ -53,7 +53,7 @@ function About() {
             <div className="w-6/12 md:w-1/4 px-3 py-6">
               <div className="featured-box text-center">
                 <h4 className="font-semibold text-5xl leading-snug mb-0 text-white">
-                  <span>7</span>+
+                  <span>8</span>+
                 </h4>
                 <p className="mb-0 text-white">Years Experiance</p>
               </div>
