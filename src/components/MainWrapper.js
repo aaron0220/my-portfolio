@@ -5,8 +5,6 @@ import Services from "./Services";
 import Resume from "./Resume";
 import Portfolio from "./Portfolio";
 import PortfolioModal from "./PortfolioModal";
-import Testimonial from "./Testimonial";
-import Contact from "./Contact";
 import Navbar from "./Navbar";
 
 function MainWrapper() {
@@ -58,8 +56,6 @@ function MainWrapper() {
           toggle={modalToggle}
           close={modalClose}
         ></PortfolioModal>
-        <Testimonial></Testimonial>
-        <Contact></Contact>
       </div>
     </div>
   );

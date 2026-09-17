@@ -36,14 +36,6 @@ function Navbar() {
       label: "Portfolio",
       url: "portfolio",
     },
-    {
-      label: "Testimonial",
-      url: "testimonial",
-    },
-    {
-      label: "Contact",
-      url: "contact",
-    },
   ];
   return (
     <nav className="primary-menu bg-neutral-900 w-full lg:w-64 h-auto lg:h-full overflow-hidden overflow-visible lg:overflow-y-auto start-0 fixed z-40">

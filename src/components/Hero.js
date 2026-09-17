@@ -50,7 +50,7 @@ function Hero() {
                 </h2>
                 <p className="text-xl text-white mb-8">based in Philippines.</p>
                 <a
-                  href="#contact"
+                  href="mailto:aaronsmerin01@gmail.com"
                   className="inline-block py-3 px-10 border-2 border-amber-500 rounded-3xl font-medium text-amber-500 hover:bg-amber-500 hover:text-white ease-in duration-200"
                 >
                   Hire Me
