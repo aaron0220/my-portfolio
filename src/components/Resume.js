@@ -9,7 +9,7 @@ function Resume() {
       title: "Fullstack Wordpress Developer",
       company: "Intoweb",
       description:
-        "I have 5 years of professional experience as a WordPress Developer, where I developed extensive expertise in web development, WordPress customization, and website maintenance. During this time, I worked on a wide range of projects, tackled complex technical challenges, and developed high-quality, responsive websites that met client requirements and expectations. This experience allowed me to continuously improve my technical skills and gain a strong understanding of WordPress development and customization.",
+        "I have 8 years of professional experience as a WordPress Developer, where I developed extensive expertise in web development, WordPress customization, and website maintenance. During this time, I worked on a wide range of projects, tackled complex technical challenges, and developed high-quality, responsive websites that met client requirements and expectations. This experience allowed me to continuously improve my technical skills and gain a strong understanding of WordPress development and customization.",
     },
     {
       year: "2017 - 2018",
