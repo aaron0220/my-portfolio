@@ -5,11 +5,11 @@ import Title from "./section/Title";
 function Resume() {
   const EXPERIENCES = [
     {
-      year: "2018 - 2023",
+      year: "2018 - 2026",
       title: "Fullstack Wordpress Developer",
       company: "Intoweb",
       description:
-        "I had the privilege of working closely with Mirco, the founder of Intoweb, for a duration of 5 years as a WordPress Developer. During this time, I gained invaluable experience and insights into web development and WordPress customization. Collaborating with Mirco allowed me to refine my skills, tackle complex challenges, and deliver high-quality websites that met and exceeded our clients' expectations. Mirco's guidance and mentorship played a significant role in shaping my career as a WordPress Developer, and I am grateful for the opportunity to have worked alongside him at Intoweb.",
+        "I have 5 years of professional experience as a WordPress Developer, where I developed extensive expertise in web development, WordPress customization, and website maintenance. During this time, I worked on a wide range of projects, tackled complex technical challenges, and developed high-quality, responsive websites that met client requirements and expectations. This experience allowed me to continuously improve my technical skills and gain a strong understanding of WordPress development and customization.",
     },
     {
       year: "2017 - 2018",
