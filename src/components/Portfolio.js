@@ -1,12 +1,13 @@
 import React from "react";
-import "./Portfolio.scss";
 import Title from "./section/Title";
+import { asset } from "../utils/asset";
+import { GripVerticalIcon } from "./icons/LucideIcons";
 
 function Portfolio({ open, portfolio }) {
   const PROJECTS = [
     {
       id: 13,
-      name: "Lifelink-Medical",
+      name: "Lifelink Medical",
       company: "Intoweb",
       image: "media/portfolio/lifelink/frontpage.jpg",
       url: "https://www.lifelink-medical.com/",
@@ -110,7 +111,7 @@ function Portfolio({ open, portfolio }) {
     },
     {
       id: 3,
-      name: "The Met Location",
+      name: "The Mett Location",
       company: "Intoweb",
       image: "media/portfolio/the-mett-location/frontpage.jpg",
       url: "https://the-mett-location.de/",
@@ -141,7 +142,11 @@ function Portfolio({ open, portfolio }) {
         "media/portfolio/gottschalk-partner/2.jpg",
       ],
     },
-  ];
+  ].map((project) => ({
+    ...project,
+    image: asset(project.image),
+    slides: project.slides.map(asset),
+  }));
 
   const showData = (id) => {
     const project = PROJECTS.find((item) => item.id === id);
@@ -151,34 +156,50 @@ function Portfolio({ open, portfolio }) {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-[#343a40]">
-      <div className="container px-4 md:px-12 mx-auto">
-        <Title heading="Portfolio" subheading="My Works"></Title>
-        <div className="portfolio">
-          <div className="portfolio-filter ">
-            <div className="filter-item px-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {PROJECTS.map((item) => (
-                <div
-                  id={item.id}
-                  key={item.id}
-                  className="portfolio-box relative rounded overflow-hidden cursor-pointer"
-                  onClick={() => showData(item.id)}
-                >
-                  <div className="portfolio-img">
-                    <img className="" src={item.image} alt="" />
-                    <div className="portfolio-overlay">
-                      <div className="portfolio-overlay-details my-auto w-full">
-                        <h5 className="text-white text-xl">{item.name}</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section id="portfolio" className="portfolio-area pt-12 nav:pt-[90px] pb-16 nav:pb-[90px]">
+      <div className="content-width">
+        <Title
+          icon={<GripVerticalIcon size={14} />}
+          label="Portfolio"
+          heading={
+            <>
+              Featured <span className="text-drake-accent">Projects</span>
+            </>
+          }
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+          {PROJECTS.map((item, index) => (
+            <article
+              key={item.id}
+              className={`portfolio-item cursor-pointer ${index === 0 ? "md:col-span-2" : ""}`}
+              onClick={() => showData(item.id)}
+            >
+              <div
+                className={`portfolio-item-inner ${index === 0 ? "md:h-[410px]" : ""}`}
+              >
+                <img src={item.image} alt={item.name} />
+                <ul className="absolute bottom-5 left-5 flex flex-wrap gap-2.5">
+                  <li>
+                    <span className="block text-sm bg-white text-black py-[7px] px-5 rounded-[19px] transition-colors">
+                      {item.company}
+                    </span>
+                  </li>
+                  <li>
+                    <span className="block text-sm bg-white text-black py-[7px] px-5 rounded-[19px] transition-colors">
+                      WordPress
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <h3>
+                <span>{item.name}</span>
+              </h3>
+            </article>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
 export default Portfolio;

@@ -1,16 +1,19 @@
-$amber-500: rgb(245 158 11);
-
 #modal-container {
   position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  transform: scale(0);
-  z-index: 50;
-  animation: none;
-  transform: scale(1);
-  animation: quickScaleDown 0s 0.5s linear forwards;
+  z-index: 120;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#modal-container.active {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
 }
 
 #modal-container .modal-overlay {
@@ -20,20 +23,14 @@ $amber-500: rgb(245 158 11);
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0);
-  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 #modal-container.active .modal-overlay {
   animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.active {
-  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
 #modal-container .modal-background .modal {
   opacity: 0;
-  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 #modal-container.active .modal-background .modal {
@@ -42,26 +39,30 @@ $amber-500: rgb(245 158 11);
 
 .project-slider .slick-dots li button:before {
   font-size: 16px;
+  color: #28e98c;
 }
-.project-slider .slick-dots li button:before {
-  color: $amber-500;
-}
+
 .project-slider .slick-dots li.slick-active button:before {
-  color: $amber-500;
+  color: #28e98c;
 }
+
 .project-slider .slick-dots {
   position: static;
   margin-top: 1rem;
 }
+
 .project-slider .slick-slide {
   padding: 0 0.75rem;
 }
+
 .project-slider .slick-arrow {
   z-index: 2;
 }
+
 .project-slider .slick-arrow:before {
   display: none;
 }
+
 .slick-next {
   background: url(../../public/media/right-arrow.png) no-repeat;
   background-size: contain;
@@ -69,9 +70,12 @@ $amber-500: rgb(245 158 11);
   height: 24px;
   right: 20px;
 }
-.slick-next:hover, .slick-next:focus {
+
+.slick-next:hover,
+.slick-next:focus {
   background: url(../../public/media/right-arrow.png) no-repeat;
 }
+
 .slick-prev {
   background: url(../../public/media/left-arrow.png) no-repeat;
   background-size: contain;
@@ -79,21 +83,10 @@ $amber-500: rgb(245 158 11);
   height: 24px;
   left: 20px;
 }
-.slick-prev:hover, .slick-prev:focus {
+
+.slick-prev:hover,
+.slick-prev:focus {
   background: url(../../public/media/left-arrow.png) no-repeat;
-}
-
-
-@keyframes quickScaleDown {
-  0% {
-    transform: scale(1);
-  }
-  99.9% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
 }
 
 @keyframes fadeIn {
@@ -102,15 +95,6 @@ $amber-500: rgb(245 158 11);
   }
   100% {
     background: rgba(0, 0, 0, 0.7);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    background: rgba(0, 0, 0, 0);
   }
 }
 
@@ -129,17 +113,3 @@ $amber-500: rgb(245 158 11);
   }
 }
 
-@keyframes scaleDown {
-  0% {
-    transform: scale(1) translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.8) translateX(-50%);
-    left: 50%;
-    top: 100%;
-    opacity: 0;
-  }
-}

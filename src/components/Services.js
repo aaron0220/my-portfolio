@@ -1,111 +1,71 @@
 import React from "react";
 import Title from "./section/Title";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faWordpress } from "@fortawesome/free-brands-svg-icons";
 import {
-  faFillDrip,
-  faCode,
-  faCartShopping,
-  faPenRuler,
-} from "@fortawesome/free-solid-svg-icons";
+  ListCheckIcon,
+  CodeXmlIcon,
+  PencilRulerIcon,
+  ShoppingCartIcon,
+  SplinePointerIcon,
+} from "./icons/LucideIcons";
 
 function Services() {
+  const SERVICES = [
+    {
+      title: "WordPress Development",
+      Icon: CodeXmlIcon,
+      description:
+        "Professional WordPress development tailored to your goals — whether you are launching a blog, building an e-commerce site, or refreshing a business website.",
+    },
+    {
+      title: "Responsive Design",
+      Icon: PencilRulerIcon,
+      description:
+        "Your website is often the first interaction customers have with your brand. I design user-friendly, responsive sites that look sharp and work seamlessly across devices.",
+    },
+    {
+      title: "E-commerce Integration",
+      Icon: ShoppingCartIcon,
+      description:
+        "Specialized e-commerce builds for online retail. I create robust, conversion-focused stores tailored to your products, operations, and customers.",
+    },
+    {
+      title: "UI/UX Design",
+      Icon: SplinePointerIcon,
+      description:
+        "Visually refined, intuitive interfaces that keep users engaged. I focus on clarity, usability, and a polished experience from first click to conversion.",
+    },
+  ];
+
   return (
-    <section id="services" className="py-20 bg-[#343a40] ">
-      <div className="container px-4 md:px-12 mx-auto">
-        <Title heading="Services" subheading="What I do"></Title>
-        <div className="flex flex-wrap">
-          <div className="w-full xl:w-3/6 px-3">
-            <div className="pl-20 lg:pl-24 mb-12 relative">
-              <div className="flex justify-center items-center absolute w-16 h-16 lg:w-20 lg:h-20 bg-[#212529] top-0 left-0 rounded-lg shadow-xl">
-                <FontAwesomeIcon
-                  icon={faCode}
-                  className="text-base lg:text-2xl"
-                  style={{ color: "rgb(245, 158, 11)" }}
-                />
-              </div>
-              <h3 className="text-white text-xl mb-2.5 font-semibold">
-                Wordpress Development
-              </h3>
-              <p className="text-white text-base leading-[1.8] text-justify">
-                Are you in need of a professional WordPress developer to bring
-                your online vision to life? Look no further. My WordPress
-                development service is tailored to meet your unique needs,
-                whether you arre staring a blog, launching an e-commerce site,
-                or revamping your business website.
-              </p>
-            </div>
-          </div>
-          <div className="w-full xl:w-3/6 px-3">
-            <div className="pl-20 lg:pl-24 mb-12 relative">
-              <div className="flex justify-center items-center absolute w-16 h-16 lg:w-20 lg:h-20 bg-[#212529] top-0 left-0 rounded-lg shadow-xl">
-                <FontAwesomeIcon
-                  icon={faPenRuler}
-                  className="text-base lg:text-2xl"
-                  style={{ color: "rgb(245, 158, 11)" }}
-                />
-              </div>
-              <h3 className="text-white text-xl mb-2.5 font-semibold">
-                Responsive Design
-              </h3>
-              <p className="text-white text-base leading-[1.8] text-justify">
-                Unlock the potential of your online presence with my expert web
-                developer design service. I understand that your website is
-                often the first interaction customers have with your brand, and
-                I am here to make it count. Me as a skilled web developer and
-                designer will collaborate closely with you to create a stunning,
-                user-friendly, and responsive website that not only looks
-                fantastic but also functions seamlessly across all devices.
-              </p>
-            </div>
-          </div>
-          <div className="w-full xl:w-3/6 px-3">
-            <div className="pl-20 lg:pl-20 lg:pl-24 mb-12 relative">
-              <div className="flex justify-center items-center absolute w-16 h-16 lg:w-20 lg:h-20 bg-[#212529] top-0 left-0 rounded-lg shadow-xl">
-                <FontAwesomeIcon
-                  icon={faCartShopping}
-                  className="text-base lg:text-2xl"
-                  style={{ color: "rgb(245, 158, 11)" }}
-                />
-              </div>
-              <h3 className="text-white text-xl mb-2.5 font-semibold">
-                E-commerce Integration
-              </h3>
-              <p className="text-white text-base leading-[1.8] text-justify">
-                Empower your e-commerce ambitions with our specialized web
-                developer e-commerce service. In the fast-paced world of online
-                retail, having a robust and user-friendly e-commerce website is
-                essential. Me as a experienced web developers who specialize in
-                creating tailored e-commerce solutions to meet your unique
-                business needs.
-              </p>
-            </div>
-          </div>
-          <div className="w-full xl:w-3/6 px-3">
-            <div className="pl-20 lg:pl-24 mb-12 relative">
-              <div className="flex justify-center items-center absolute w-16 h-16 lg:w-20 lg:h-20 bg-[#212529] top-0 left-0 rounded-lg shadow-xl">
-                <FontAwesomeIcon
-                  icon={faFillDrip}
-                  className="text-base lg:text-2xl"
-                  style={{ color: "rgb(245, 158, 11)" }}
-                />
-              </div>
-              <h3 className="text-white text-xl mb-2.5 font-semibold">
-                UI/UX Design
-              </h3>
-              <p className="text-white text-base leading-[1.8] text-justify">
-                Elevate your digital presence with my UI/UX design service. I
-                understand that in today's hyper-competitive digital landscape,
-                user experience is paramount. Me as a talented UI/UX designers
-                is committed to creating visually stunning and intuitively
-                functional interfaces that captivate your audience and keep them
-                engaged.
-              </p>
-            </div>
-          </div>
+    <section id="services" className="services-area pt-12 nav:pt-[90px] pb-12 nav:pb-[90px]">
+      <div className="content-width">
+        <Title
+          icon={<ListCheckIcon size={14} />}
+          label="Services"
+          heading={
+            <>
+              My <span className="text-drake-accent">Specializations</span>
+            </>
+          }
+        />
+        <div className="services-items grid grid-cols-1 gap-2.5 md:grid-cols-2 nav:grid-cols-1">
+          {SERVICES.map((service) => (
+            <article
+              key={service.title}
+              className="service-item group relative border border-[#565656] rounded-[20px] px-8 py-10 transition-colors hover:border-drake-accent"
+            >
+              <service.Icon
+                size={30}
+                className="absolute top-10 right-10 text-drake-accent"
+              />
+              <h3 className="text-white text-2xl font-light mb-2 pr-12 transition-colors group-hover:text-drake-accent">{service.title}</h3>
+              <p className="text-sm text-drake-muted">{service.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
 export default Services;

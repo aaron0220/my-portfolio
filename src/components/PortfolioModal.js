@@ -21,7 +21,9 @@ function PortfolioModal(props) {
 
   const closeFunc = () => {
     document.body.classList.remove("modal-active");
-    slickSlider.current.slickGoTo(0);
+    if (slickSlider.current) {
+      slickSlider.current.slickGoTo(0);
+    }
     close(false);
   };
 
@@ -34,13 +36,16 @@ function PortfolioModal(props) {
     slidesToScroll: 1,
   };
 
-  const parsedURL = new URL(projectURL);
+  let domain = "";
+  try {
+    domain = new URL(projectURL).hostname;
+  } catch (error) {
+    domain = projectURL;
+  }
 
-  const domain = parsedURL.hostname;
-
-  const items = projectSlides.map((item, index) => (
+  const items = (projectSlides || []).map((item, index) => (
     <div key={index}>
-      <img key={index} src={item} alt={`Slide ${index + 1}`} />
+      <img src={item} alt={`${projectTitle} slide ${index + 1}`} />
     </div>
   ));
 
@@ -50,56 +55,47 @@ function PortfolioModal(props) {
       id="modal-container"
     >
       <div className="modal-background">
-        <div
-          className="modal-overlay"
-          onClick={() => {
-            closeFunc();
-          }}
-        ></div>
+        <div className="modal-overlay" onClick={closeFunc}></div>
         <div className="modal max-w-[1140px] w-11/12 absolute">
-          <div className="modal-content bg-[#343a40] text-white">
-            <div className="modal-body pt-10 pb-16 px-6">
+          <div className="modal-content bg-[#1f1f1f] text-white border border-[#565656] rounded-[30px] overflow-hidden">
+            <div className="modal-body pt-10 pb-16 px-6 md:px-10">
               <FontAwesomeIcon
                 icon={faXmark}
-                className="absolute right-4 top-2.5 cursor-pointer"
+                className="absolute right-5 top-4 cursor-pointer"
                 size="2xl"
                 style={{ color: "#ffffff" }}
-                onClick={() => {
-                  closeFunc();
-                }}
+                onClick={closeFunc}
               />
               <div className="container ajax-container text-white">
-                <h2 className="text-xl font-medium text-center mb-8 text-white">
+                <h2 className="text-2xl font-light text-center mb-8 text-white">
                   {projectTitle}
                 </h2>
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-8/12">
                     <div className="project-slider">
-                      <Slider ref={slickSlider} {...settings}>
-                        {items}
-                      </Slider>
+                      {toggle ? (
+                        <Slider ref={slickSlider} {...settings}>
+                          {items}
+                        </Slider>
+                      ) : null}
                     </div>
                   </div>
-                  <div className="w-full px-4 mt-6 lg:mt-0 lg:w-4/12">
-                    <h4 className="text-lg font-medium mt-4 text-white">
-                      Project Details:
+                  <div className="w-full px-0 lg:px-4 mt-6 lg:mt-0 lg:w-4/12">
+                    <h4 className="text-lg font-light mt-2 text-white">
+                      Project Details
                     </h4>
-                    <ul className="list-style-2 list-style-light">
-                      <li className="border-b border-white/50 py-3 text-white">
-                        <span className="text-dark font-medium me-2 text-white">
-                          Company:
-                        </span>
+                    <ul>
+                      <li className="border-b border-white/20 py-3 text-white">
+                        <span className="font-medium mr-2">Company:</span>
                         {projectCompany}
                       </li>
-                      <li className="border-b border-white/50 py-3 text-white">
-                        <span className="text-dark font-medium me-2 text-white">
-                          URL:
-                        </span>
+                      <li className="border-b border-white/20 py-3 text-white">
+                        <span className="font-medium mr-2">URL:</span>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
                           href={projectURL}
-                          className="text-amber-500"
+                          className="text-drake-accent"
                         >
                           {domain}
                         </a>

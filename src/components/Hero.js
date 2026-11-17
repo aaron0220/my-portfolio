@@ -1,74 +1,60 @@
-import React, { useState } from "react";
-import Typewriter from "typewriter-effect";
+import React from "react";
+import Title from "./section/Title";
+import { HouseIcon, ArrowDownIcon } from "./icons/LucideIcons";
+
 function Hero() {
-  const [hidden, setHidden] = useState("hidden");
-  const [remove, setRemove] = useState("");
-
-  setTimeout(() => {
-    setHidden("");
-  }, 0);
-
-  setTimeout(() => {
-    setRemove("remove");
-  }, 1800);
   return (
-    <section id="home">
-      <div className={`welcome-mask ${remove} bg-black`}>
-        <ul className={`fly-in-text ${hidden} ${remove} text-amber-500`}>
-          <li>W</li>
-          <li>E</li>
-          <li>L</li>
-          <li>C</li>
-          <li>O</li>
-          <li>M</li>
-          <li>E</li>
-        </ul>
-      </div>
-      <div className="hero-wrap">
-        <div className="hero-mask absolute w-full left-0 right-0 h-screen z-2 bg-slate-950 opacity-60"></div>
-        <div className="hero-bg parallax bg-center bg-no-repeat bg-cover bg-fixed absolute w-full left-0 right-0 h-screen z-1"></div>
-        <div className="hero-content flex relative z-10 h-screen w-full">
-          <div className="container my-auto mx-auto">
-            <div className="flex ">
-              <div className="intro-text w-full text-center">
-                <h2
-                  id="typeme"
-                  className="text-3xl md:text-6xl leading-normal font-semibold text-white mb-2 mb-3"
-                >
-                  <Typewriter
-                    options={{
-                      strings: [
-                        "A Web Developer.",
-                        "A Wordpress Expert.",
-                        "A Web Designer.",
-                        "A UX/UI Designer.",
-                      ],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </h2>
-                <p className="text-xl text-white mb-8">based in Philippines.</p>
-                <a
-                  href="mailto:aaronsmerin01@gmail.com"
-                  className="inline-block py-3 px-10 border-2 border-amber-500 rounded-3xl font-medium text-amber-500 hover:bg-amber-500 hover:text-white ease-in duration-200"
-                >
-                  Hire Me
-                </a>
-              </div>
-            </div>
+    <section id="home" className="hero-section pt-10 nav:pt-[68px] pb-10 nav:pb-[90px]">
+      <div className="content-width">
+        <Title icon={<HouseIcon size={14} />} label="Introduce" />
+        <h1 className="text-white text-[42px] sm:text-[50px] md:text-[58px] nav:text-[72px] leading-[1.2] nav:leading-[84px] font-light mb-8 tracking-tight">
+          <span className="text-drake-accent">WordPress Developer</span> and Web Designer
+        </h1>
+        <p className="max-w-[480px] mb-8 text-drake-muted">
+          I design and build clean, high-performing websites — and I love
+          what I do. Simple as that.
+        </p>
+        <a href="#portfolio" className="go-to-project-btn shrink-0" aria-label="View projects">
+          <svg viewBox="0 0 200 200" className="animate-rotating">
+            <defs>
+              <path
+                id="circlePath"
+                d="M 100, 100 m -72, 0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"
+              />
+            </defs>
+            <text fill="#ffffff" fontSize="22" letterSpacing="3">
+              <textPath href="#circlePath">
+                MY PROJECTS • MY PROJECTS •
+              </textPath>
+            </text>
+          </svg>
+          <ArrowDownIcon size={40} className="center-icon" />
+        </a>
+        <div className="flex flex-wrap gap-10 md:gap-24 mt-10">
+          <div>
+            <h2 className="text-drake-accent text-5xl md:text-6xl font-light leading-none mb-6">
+              8+
+            </h2>
+            <p className="text-sm uppercase leading-6 m-0">
+              Years of
+              <br />
+              Experience
+            </p>
           </div>
-          <a
-            href="#about"
-            className="scroll-down-arrow text-white smooth-scroll"
-          >
-            <span className="animated">
-              <i className="fa fa-chevron-down"></i>
-            </span>
-          </a>
+          <div>
+            <h2 className="text-drake-accent text-5xl md:text-6xl font-light leading-none mb-6">
+              100+
+            </h2>
+            <p className="text-sm uppercase leading-6 m-0">
+              Projects completed
+              <br />
+              for clients worldwide
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 export default Hero;
