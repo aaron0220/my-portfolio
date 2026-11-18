@@ -33,6 +33,39 @@ function Portfolio({ open, portfolio }) {
       slides: ["media/portfolio/dcms/1.jpg", "media/portfolio/dcms/2.jpg"],
     },
     {
+      id: 15,
+      name: "Stonehedge",
+      company: "Intoweb",
+      image: "media/portfolio/stonehedge/frontpage.jpg",
+      url: "https://www.stonehedge.de/",
+      slides: [
+        "media/portfolio/stonehedge/1.jpg",
+        "media/portfolio/stonehedge/2.jpg",
+      ],
+    },
+    {
+      id: 14,
+      name: "Stonehedge Immobilien",
+      company: "Intoweb",
+      image: "media/portfolio/stonehedge-immobilien/frontpage.jpg",
+      url: "https://www.stonehedge-immobilien.de/",
+      slides: [
+        "media/portfolio/stonehedge-immobilien/1.jpg",
+        "media/portfolio/stonehedge-immobilien/2.jpg",
+      ],
+    },
+    {
+      id: 7,
+      name: "Erlebnis-fernreisen",
+      company: "Intoweb",
+      image: "media/portfolio/erlebnis-fernreisen.de/frontpage.jpg",
+      url: "https://www.erlebnis-fernreisen.de/",
+      slides: [
+        "media/portfolio/erlebnis-fernreisen.de/1.jpg",
+        "media/portfolio/erlebnis-fernreisen.de/2.jpg",
+      ],
+    },
+    {
       id: 10,
       name: "Noobru Advantage",
       company: "Noobru",
@@ -63,17 +96,6 @@ function Portfolio({ open, portfolio }) {
       slides: [
         "media/portfolio/trooorganics/1.jpg",
         "media/portfolio/trooorganics/2.jpg",
-      ],
-    },
-    {
-      id: 7,
-      name: "In-Australien",
-      company: "Intoweb",
-      image: "media/portfolio/in-australien/frontpage.jpg",
-      url: "https://www.in-australien.com/",
-      slides: [
-        "media/portfolio/in-australien/1.jpg",
-        "media/portfolio/in-australien/2.jpg",
       ],
     },
     {
